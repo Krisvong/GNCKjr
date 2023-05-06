@@ -1,0 +1,28 @@
+.react-calendar {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.calendar-container {
+  height: 500px;
+  margin-top: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.rbc-time-slot {
+  position: relative;
+  line-height: 15px;
+}
+
+.rbc-event {  
+  overflow: hidden;
+  background-color: #2196F3;
+  color: #FFF;
+  font-size: 14px;
+} 
