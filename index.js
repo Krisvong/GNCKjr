@@ -3,8 +3,8 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("./db.js"); // Import the database connection pool from db.js
-const path = require("path")
-const PORT = process.env.PORT || 5001
+const path = require("path");
+const PORT = process.env.PORT || 5001;
 
 //process.env.PORT
 //process.env.NODE_ENV => production or undefined
