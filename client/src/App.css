@@ -27,14 +27,15 @@ body {
   color: var(--aquamarine);
 }
 
-.nav-link:hover {
-  color: var(--flax);
-}
-
 h1 {
   font-weight: bold;
   text-align: center;
 }
+
+.nav-link:hover {
+  color: var(--flax);
+}
+
 .justify-content-space-between{
   display: flex;
   justify-content: center;

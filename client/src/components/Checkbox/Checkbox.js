@@ -9,7 +9,7 @@ const Checkbox = ({ todo, onChange }) => {
     console.log("Checkbox toggled")
 
     const updatedTodo = { ...todo, completed: !todo.completed };
-    const response = await fetch(`http://localhost:5001/todos/${todo.todo_id}`, {
+    const response = await fetch(`/todos/${todo.todo_id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedTodo),
@@ -27,13 +27,13 @@ const Checkbox = ({ todo, onChange }) => {
         ...updatedTodo,
         description: todo.description // Add the description field to the completed todo
       };
-      await fetch("http://localhost:5001/completed_todos", {
+      await fetch("/completed_todos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(completedTodo),
       });
       // Remove the todo from the todos list
-      await fetch(`http://localhost:5001/todos/${todo.todo_id}`, {
+      await fetch(`/todos/${todo.todo_id}`, {
         method: "DELETE",
       });
     }

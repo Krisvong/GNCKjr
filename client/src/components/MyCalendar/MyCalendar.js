@@ -25,7 +25,7 @@ const MyCalendar = () => {
   useEffect(() => {  // use the useEffect hook to fetch the todos from the server and update the todos state variable
     const fetchData = async () => {  // define an asynchronous function to fetch the todos
       try {
-        const response = await fetch('http://localhost:5001/todos');  // send a GET request to the server to fetch the todos
+        const response = await fetch('/todos');  // send a GET request to the server to fetch the todos
         const data = await response.json();  // parse the JSON response into a JavaScript object
         setTodos(data);  // update the todos state variable with the fetched data
       } catch (error) {

@@ -10,6 +10,7 @@ function Sidebar({ isCompletedTodoUpdated, todos, handleCompletedTodo }) {
     // Set up state for whether the calendar is shown or hidden
     const [showCalendar, setShowCalendar] = useState(false);
 
+    // Function to toggle the visibility of the calendar
     const handleToggleCalendar = () => {
         setShowCalendar(!showCalendar);
     };
@@ -18,6 +19,7 @@ function Sidebar({ isCompletedTodoUpdated, todos, handleCompletedTodo }) {
         // Use template literal to conditionally add "show-calendar" class to container div
         <div className={`sidebar-container${showCalendar ? " show-calendar" : ""}`}>
 
+            {/* Button to toggle calendar visibility */}
             <button className="calendar-button" onClick={handleToggleCalendar}>
                 <FontAwesomeIcon icon={faCalendarAlt} />
             </button>
@@ -31,9 +33,13 @@ function Sidebar({ isCompletedTodoUpdated, todos, handleCompletedTodo }) {
                     />
                 )}
             </div>
+
+            {/* Icon to indicate slide-out functionality */}
             <div className="caret-right">
                 <FontAwesomeIcon icon={faCaretRight} />
             </div>
+
+            {/* Completed todo list component */}
             <div className="completed-list">
                 <CompletedList isCompletedTodoUpdated={isCompletedTodoUpdated} />
             </div>

@@ -22,6 +22,7 @@
   padding: 5px;
 }
 
+/* Style for the caret icon used to expand the sidebar */
 .caret-right {
   display: flex;
   flex-direction: row;
@@ -32,9 +33,9 @@
   position: fixed;
   top: 50%;
   left: -1px;
-
 }
 
+/* Hide the calendar by default */
 .calendar-container {
   display: none;
 }

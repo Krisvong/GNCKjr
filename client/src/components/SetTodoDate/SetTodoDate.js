@@ -16,7 +16,7 @@ const SetTodoDate = ({ onSubmit, todo }) => {
       };
 
       // Send a POST request to the server to create a new todo item with the due date
-      await fetch("http://localhost:5001/todos", {
+      await fetch("/todos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

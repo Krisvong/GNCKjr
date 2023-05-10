@@ -12,7 +12,7 @@ const ListTodos = ({ onTodoCompleted }) => {
   const deleteTodo = async (id) => {
     try {
       // Send a DELETE request to the server to delete the todo with the given id
-      await fetch(`http://localhost:5001/todos/${id}`, {
+      await fetch(`/todos/${id}`, {
         method: "DELETE",
       });
 
@@ -27,7 +27,7 @@ const ListTodos = ({ onTodoCompleted }) => {
   const getTodos = async () => {
     try {
       // Send a GET request to the server to retrieve all todos
-      const response = await fetch("http://localhost:5001/todos");
+      const response = await fetch("/todos");
       const jsonData = await response.json();
 
       console.log(jsonData);

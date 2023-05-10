@@ -27,7 +27,7 @@ const EditTodo = ({ todo }) => {
       const body = { description };
       // Send a PUT request to update the todo
       const response = await fetch(
-        `http://localhost:5001/todos/${todo.todo_id}`,
+        `/todos/${todo.todo_id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

@@ -22,7 +22,7 @@ const InputTodo = () => {
       console.log("body:", body);
 
       // Send a POST request to the server to create a new todo item
-      const response = await fetch("http://localhost:5001/todos", {
+      const response = await fetch("/todos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

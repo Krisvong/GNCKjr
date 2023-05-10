@@ -8,14 +8,14 @@ const CompletedList = ({ isCompletedTodoUpdated }) => {
 
   // Fetch completed tasks from the API when the component mounts or when a new completed todo is added
   useEffect(() => {
-    fetch("http://localhost:5001/completed_todos")
+    fetch("/completed_todos")
       .then((response) => response.json())
       .then((data) => setCompletedTasks(data));
   }, [isCompletedTodoUpdated]);
 
   // Handle the deletion of a completed task by sending a DELETE request to the API
   const handleDelete = (id) => {
-    fetch(`http://localhost:5001/completed_todos/${id}`, {
+    fetch(`/completed_todos/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
